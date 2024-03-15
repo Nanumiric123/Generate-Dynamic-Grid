@@ -115,17 +115,17 @@ class MainActivity : AppCompatActivity() {
         //generate row ID in case you want to retrieve whatever value you want in textview child
         row.id = View.generateViewId()
         //generate text input for row in variable calling the method passing the button text
-        val edForRow = generateLinearContainerForED("edit text hint")
+        val edForRow = generateEditTextForRow("edit text hint")
         //generate button value in variable calling the method passing the button text
-        val btn:Button = generateLinearContainerForButton("Button")
+        val btn:Button = generateButtonForRow("Button")
         //set the button click listener
         btn.setOnClickListener{
             Toast.makeText(_context, "Button for "+ currentRow.material, Toast.LENGTH_LONG).show()
         }
         //generate linear layout variable by calling the method and passing the row parameters and the button we created
-        val buttonContainer = generateLinearContainer(rowsParam,btn)
+        val buttonContainer = generateLinearContainerForButton(rowsParam,btn)
         //generate linear layout variable for edittext
-        val edContainer = generateLinearContainer(rowsParam,edForRow)
+        val edContainer = generateLinearContainerForED(rowsParam,edForRow)
         //create rows with texts by add textview inside
         row.addView(materialTV)
         row.addView(quantityTV)
