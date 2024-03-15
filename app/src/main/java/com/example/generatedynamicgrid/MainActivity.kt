@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     //create a method for generating rows for datatable here you can generate whatever row that you like
-    private fun generateRowsForTable(currentRow:Item_Data,rowsParam:TableRow.LayoutParams):View{
+    private fun generateRowsForTable(currentRow:Item_Data,rowsParam:TableRow.LayoutParams):View {
         //Generate text view for each of the columns by calling the method we created below
         val materialTV = generateTVforRow(currentRow.material)
         val quantityTV = generateTVforRow(currentRow.quantity)
